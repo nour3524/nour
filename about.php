@@ -20,7 +20,7 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
 
 <head>
     <meta charset="utf-8">
-    <title>Kider - Preschool Website Template</title>
+    <title>Kider Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -75,12 +75,11 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.php" class="dropdown-item">School Facilities</a>
+                        <a href="Asmrs.php" class="dropdown-item">Asmr Video</a>
                             <a href="team.php" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.php" class="dropdown-item">Become A Teachers</a>
+                            <a href="profile.php" class="dropdown-item">Kids Profile</a>
                             <a href="appointment.php" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                            <a href="404.php" class="dropdown-item">play</a>
+                            <a href="404.php" class="dropdown-item">Kids Game</a>
                         </div>
                     </div>
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>
@@ -162,30 +161,7 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
         <!-- About End -->
 
 
-        <!-- Call To Action Start -->
-        <div class="container-xxl py-5">
-            <div class="container">
-                <div class="bg-light rounded">
-                    <div class="row g-0">
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.1s" style="min-height: 400px;">
-                            <div class="position-relative h-100">
-                                <img class="position-absolute w-100 h-100 rounded" src="img/call-to-action.jpg" style="object-fit: cover;">
-                            </div>
-                        </div>
-                        <div class="col-lg-6 wow fadeIn" data-wow-delay="0.5s">
-                            <div class="h-100 d-flex flex-column justify-content-center p-5">
-                                <h1 class="mb-4">Become A Teacher</h1>
-                                <p class="mb-4">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
-                                    Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo magna dolore erat amet
-                                </p>
-                                <a class="btn btn-primary py-3 px-5" href="">Get Started Now<i class="fa fa-arrow-right ms-2"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Call To Action End -->
+       
 
 
         <!-- Team Start -->

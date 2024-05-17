@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Kider - Preschool Website Template</title>
+    <title>Kider Website</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
@@ -59,17 +59,34 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle active" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 m-0">
-                            <a href="facility.php" class="dropdown-item">School Facilities</a>
+                        <a href="Asmrs.php" class="dropdown-item">Asmr Video</a>
                             <a href="team.php" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.php" class="dropdown-item">Become A Teachers</a>
+                            <a href="profile.php" class="dropdown-item">Kids Profile</a>
                             <a href="appointment.php" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                            <a href="404.php" class="dropdown-item active">play</a>
+                            <a href="404.php" class="dropdown-item active">Kids Game</a>
                         </div>
                     </div>
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>
+                    
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <?php if(isset($user_data) && !empty($user_data)): ?>
+    <?php if(isset($user_data['name']) && !empty($user_data['name'])): ?>
+        <div class="navbar-nav">
+            <div class="nav-item dropdown">
+                <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?php echo $user_data['name']; ?></a>
+                <div class="dropdown-menu dropdown-menu-end">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="logout.php">Logout</a>
+                </div>
+            </div>
+        </div>
+    <?php endif; ?>
+<?php else: ?>
+    <a href="login.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+<?php endif; ?>
+
             </div>
         </nav>
         <!-- Navbar End -->
@@ -78,12 +95,12 @@
         <!-- Page Header End -->
         <div class="container-xxl py-5 page-header position-relative mb-5">
             <div class="container py-5">
-                <h1 class="display-2 text-white animated slideInDown mb-4">lets play</h1>
+                <h1 class="display-2 text-white animated slideInDown mb-4">Kids Game</h1>
                 <nav aria-label="breadcrumb animated slideInDown">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Home</a></li>
                         <li class="breadcrumb-item"><a href="#">Pages</a></li>
-                        <li class="breadcrumb-item text-white active" aria-current="page">play</li>
+                        <li class="breadcrumb-item text-white active" aria-current="page">Games</li>
                     </ol>
                 </nav>
             </div>

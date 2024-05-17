@@ -93,18 +93,30 @@ if(isset($_POST['submit'])){
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                         <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                            <a href="facility.php" class="dropdown-item">School Facilities</a>
+                        <a href="Asmrs.php" class="dropdown-item">Asmr Video</a>
                             <a href="team.php" class="dropdown-item">Popular Teachers</a>
-                            <a href="call-to-action.php" class="dropdown-item">Become A Teachers</a>
+                            <a href="profile.php" class="dropdown-item">Kids Profile</a>
                             <a href="appointment.php" class="dropdown-item">Make Appointment</a>
-                            <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                            <a href="404.php" class="dropdown-item">play</a>
+                            <a href="404.php" class="dropdown-item">Kids Game</a>
                         </div>
                     </div>
                     <a href="contact.php" class="nav-item nav-link">Contact Us</a>
                 </div>
-                <a href="" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+                <?php if(isset($user_data) && !empty($user_data)): ?>
+            <div class="navbar-nav">
+                <div class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><?php echo $user_data['name']; ?></a>
+                    <div class="dropdown-menu dropdown-menu-end">
+                        <a class="dropdown-item" href="#">Profile</a>
+                        <a class="dropdown-item" href="#">Settings</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="logout.php">Logout</a>
+                    </div>
+                </div>
             </div>
+        <?php else: ?>
+            <a href="login.php" class="btn btn-primary rounded-pill px-3 d-none d-lg-block">Join Us<i class="fa fa-arrow-right ms-3"></i></a>
+        <?php endif; ?>            </div>
         </nav>
         <!-- Navbar End -->
 
