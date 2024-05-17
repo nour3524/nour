@@ -69,12 +69,11 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
             <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
                 <div class="dropdown-menu rounded-0 rounded-bottom border-0 shadow-sm m-0">
-                    <a href="facility.php" class="dropdown-item">School Facilities</a>
+                <a href="Asmrs.php" class="dropdown-item">Asmr Video</a>
                     <a href="team.php" class="dropdown-item">Popular Teachers</a>
-                    <a href="call-to-action.php" class="dropdown-item">Become A Teacher</a>
+                    <a href="profile.php" class="dropdown-item">Kids Profile</a>
                     <a href="appointment.php" class="dropdown-item">Make Appointment</a>
-                    <a href="testimonial.php" class="dropdown-item">Testimonial</a>
-                    <a href="404.php" class="dropdown-item">play</a>
+                    <a href="404.php" class="dropdown-item">Kids Game</a>
                 </div>
             </div>
             <a href="contact.php" class="nav-item nav-link">Contact Us</a>
@@ -142,7 +141,7 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
             <div class="container">
                 <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
                     <h1 class="mb-3">School Facilities</h1>
-                    <p>Discover our tailored school facilities designed to support ADHD children, fostering an environment where they can thrive academically and socially. From specialized classrooms to sensory-friendly spaces, we prioritize their unique needs for optimal learning experiences.</p>
+                    <p>Eirmod sed ipsum dolor sit rebum labore magna erat. Tempor ut dolore lorem kasd vero ipsum sit eirmod sit. Ipsum diam justo sed rebum vero dolor duo.</p>
                 </div>
                 <div class="row g-4">
                     <div class="col-lg-3 col-sm-6 wow fadeInUp" data-wow-delay="0.1s">
@@ -153,7 +152,7 @@ $user_data = $select_user->fetch(PDO::FETCH_ASSOC);
                                 <span class="bg-primary"></span>
                             </div>
                             <div class="facility-text bg-primary">
-                                <h3 class="text-primary mb-3"></h3>
+                                <h3 class="text-primary mb-3">School Bus</h3>
                                 <p class="mb-0">Eirmod sed ipsum dolor sit rebum magna erat lorem kasd vero ipsum sit</p>
                             </div>
                         </div>

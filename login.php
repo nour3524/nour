@@ -11,26 +11,29 @@ if(isset($_COOKIE['user_id'])){
 
 if(isset($_POST['submit'])){
    // Form submitted, process login
-   $email = $_POST['email'];
-   $email = filter_var($email, FILTER_SANITIZE_STRING);
-   $pass = sha1($_POST['pass']);
-   $pass = filter_var($pass, FILTER_SANITIZE_STRING);
+   $email = filter_var($_POST['email'], FILTER_SANITIZE_EMAIL); // Sanitize email input
+   $pass = sha1($_POST['pass']); // Hash the password
 
    $select_user = $conn->prepare("SELECT * FROM `users` WHERE email = ? AND password = ? LIMIT 1");
    $select_user->execute([$email, $pass]);
    $row = $select_user->fetch(PDO::FETCH_ASSOC);
    
-   if($select_user->rowCount() > 0){
+   if($row){ // Check if a user is found
      setcookie('user_id', $row['id'], time() + 60*60*24*30, '/');
-     header('location:home.php');
+     header('Location: home.php'); // Redirect to home page upon successful login
+     exit();
    }else{
       $_SESSION['error_message'] = 'Incorrect email or password!'; // Store error message in session
-      header('location:login.php'); // Redirect to login page
+      header('Location: login.php'); // Redirect to login page
       exit();
    }
-
 }
 
+// Redirect to register page if the registration button is clicked
+if(isset($_POST['register'])){
+   header('Location: register.php');
+   exit();
+}
 ?>
 
 <!DOCTYPE html>
